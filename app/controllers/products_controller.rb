@@ -24,4 +24,10 @@ class ProductsController < ApplicationController
     @products = Product.all
     render :index
   end
+
+  def random
+    pool = Product.all
+    sample = pool.sample
+    render json: sample
+  end
 end
