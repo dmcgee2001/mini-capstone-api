@@ -9,9 +9,14 @@ class ProductsController < ApplicationController
     render :index
   end
 
-  def random
-    pool = Product.all
-    sample = pool.sample
-    render json: sample
+  def create
+    @product = Product.new(
+      name: params["name"],
+      price: params["price"],
+      image_url: params["image_url"],
+      description: params["description"],
+    )
+    @product.save
+    render :show
   end
 end
