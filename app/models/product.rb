@@ -4,6 +4,7 @@ class Product < ApplicationRecord
   validates :name, length: { in: 1..30 }
   validates :price, numericality: { greater_than: 0 }
   validates :description, length: { maximum: 500 }
+  #  validates :image, allow_blank: true, format: { with: %r{.(gif|jpg|png)\Z}i, message: "must be a URL for GIF, JPG or PNG image." }
 
   def is_discounted?
     if price <= 10
