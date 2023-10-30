@@ -1,6 +1,6 @@
 class Product < ApplicationRecord
   validates :name, :price, presence: true
-  validates :name, uniqueniess: true
+  validates :name, uniqueness: true
   validates :name, length: { in: 1..30 }
   validates :price, numericality: { greater_than: 0 }
   validates :description, length: { maximum: 500 }
