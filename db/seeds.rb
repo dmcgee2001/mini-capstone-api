@@ -17,5 +17,6 @@
 #   {url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQ052?wid=4000&hei=1800&fmt=jpeg&qlt=95&.v=1495129815011", product_id: 10},
 #   {url: "https://musgravepencil.com/cdn/shop/products/Havest_CedarPencil_1024x1024@2x.jpg?v=1576593212", product_id: 1},
 #   {url: "https://media.officedepot.com/images/f_auto,q_auto,e_sharpen,h_450/products/698542/698542_o01_110420/698542", product_id: 2},
-#   {url: "https://cdn-images.article.com/products/SKU19375/2890x1500/image84734.jpg", product_id: 9}
+#   {url: "https://cdn-images.article.com/products/SKU19375/2890x1500/image84734.jpg", product_id: 9},
+#   {url: "https://cdn.vectorstock.com/i/preview-1x/30/25/pencil-vector-39133025.jpg", product_id: 1}
 # ])
