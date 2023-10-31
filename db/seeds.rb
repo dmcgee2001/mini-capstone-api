@@ -5,3 +5,7 @@
 #   {name: "book", price: "35.0", image_url: "https://www.collinsdictionary.com/images/full/book_181404689_1000.jpg", description: "good for reading and whatnot", inventory: 10},
 #   {name: "desk", price: "55.0", image_url: "https://cdn-images.article.com/products/SKU19375/2890x1500/image84734.jpg", description: "good for putting stuff on", inventory: 8},
 #{name: "keyboard", price: "35.0", image_url: "https://store.storeimages.cdn-apple.com/4982/as-images.apple.com/is/MQ052?wid=4000&hei=1800&fmt=jpeg&qlt=95&.v=1495129815011", description: "good for typing and whatnot", inventory: 4}
+
+# Supplier.create!({ name: "Amazon", email: "amazon@wahwah.com", phone_number: "1(800)-555-5555" })
+# Supplier.create!({ name: "Ford", email: "ford@wahwah.com", phone_number: "(613)-353-2917" })
+# Supplier.create!({ name: "Staples", email: "staples@wahwah.com", phone_number: "(614)-273-8901" })
