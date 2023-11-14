@@ -20,3 +20,8 @@ Image.create!([
   { url: "https://cdn-images.article.com/products/SKU19375/2890x1500/image84734.jpg", product_id: 9 },
   { url: "https://cdn.vectorstock.com/i/preview-1x/30/25/pencil-vector-39133025.jpg", product_id: 1 },
 ])
+
+User.create!([
+  { name: "Derek McGee", email: "derek@example.com", password: "blahblah", password_confirmation: "blahblah" },
+  { name: "Kalista Pineda", email: "kalista@example.com", password: "yoyoyo", password_confirmation: "yoyoyo" },
+])
