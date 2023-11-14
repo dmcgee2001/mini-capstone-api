@@ -19,4 +19,11 @@ Rails.application.routes.draw do
   post "/images" => "images#create"
   patch "/images/:id" => "images#update"
   delete "/images/:id" => "images#destroy"
+
+  # For Users
+  get "/users/:id" => "users#show"
+  get "/users" => "users#index"
+  post "/users" => "users#create"
+  patch "/users/:id" => "users#update"
+  delete "/users/:id" => "users#destroy"
 end
