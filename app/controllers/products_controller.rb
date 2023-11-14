@@ -15,7 +15,6 @@ class ProductsController < ApplicationController
       name: params["name"],
       price: params["price"],
       description: params["description"],
-      description: params["inventory"],
       supplier_id: params["supplier_id"],
     )
     @product.save
@@ -32,7 +31,6 @@ class ProductsController < ApplicationController
       name: params["name"] || @product.name,
       price: params["price"] || @product.price,
       description: params["description"] || @product.description,
-      description: params["inventory"] || @product.inventory,
       supplier_id: params["supplier_id"] || @product.supplier_id,
     )
     if @product.valid?
