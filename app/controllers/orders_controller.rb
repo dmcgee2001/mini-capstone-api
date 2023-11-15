@@ -6,9 +6,9 @@ class OrdersController < ApplicationController
       user_id: current_user.id,
       product_id: params["product_id"],
       quantity: params["quantity"],
-      subtotal: price,
-      tax: price * 0.09,
-      total: price * 1.09,
+      subtotal: price * params["quantity"].to_i,
+      tax: (product.tax * params["quantity"].to_i),
+      total: (product.total * params["quantity"].to_i),
 
     )
     render :show
