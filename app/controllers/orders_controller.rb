@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   def create
-    @user = User.create!(
+    @order = Order.create!(
       user_id: params["user_id"],
       product_id: params["product_id"],
       quantity: params["quantity"],
