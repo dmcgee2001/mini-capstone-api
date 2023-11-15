@@ -11,22 +11,17 @@ class OrdersController < ApplicationController
       subtotal: calculated_subtotal,
       tax: calculated_tax,
       total: calculated_total,
-
     )
     render :show
   end
 
   def show
-    @order = Order.find_by(id: params["id"])
-    if current_user.id == @order.user_id
-      render :show
-    else
-      render json: { message: "You are not the user for this order. Cannot view" }
-    end
+    @order = current_user.orders.find_by(id: params["id"])
+    render :show
   end
 
   def index
-    @orders = Order.all
+    @orders = current_user.orders
     render :index
   end
 end
