@@ -23,7 +23,8 @@ class Product < ApplicationRecord
     total = price * 1.09
     return total
   end
-  belongs_to :order
+
+  has_many :order
   belongs_to :supplier
   # def supplier
   #   Supplier.find_by(id: supplier_id)
