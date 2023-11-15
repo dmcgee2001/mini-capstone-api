@@ -15,8 +15,8 @@ class OrdersController < ApplicationController
   end
 
   def show
-    if user_id == current_user.id
-      @order = Order.find_by(id: params["id"])
+    @order = Order.find_by(id: params["id"])
+    if current_user.id == @order.user_id
       render :show
     else
       render json: { message: "You are not the user for this order. Cannot view" }
