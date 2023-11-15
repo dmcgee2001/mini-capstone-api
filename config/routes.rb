@@ -29,6 +29,7 @@ Rails.application.routes.draw do
 
   # For Login
   post "/sessions" => "sessions#create"
+
   # For Orders
   post "/orders" => "orders#create"
   get "/orders/:id" => "orders#show"
