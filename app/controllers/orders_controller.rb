@@ -18,7 +18,7 @@ class OrdersController < ApplicationController
   end
 
   def index
-    @orders = Orderall
+    @orders = Order.all
     render :index
   end
 end
