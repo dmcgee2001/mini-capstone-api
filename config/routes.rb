@@ -29,4 +29,6 @@ Rails.application.routes.draw do
 
   # For Login
   post "/sessions" => "sessions#create"
+  # For Orders
+  post "/orders" => "orders#create"
 end

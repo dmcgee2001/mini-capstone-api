@@ -9,5 +9,6 @@ class OrdersController < ApplicationController
       total: params["total"],
 
     )
+    render :show
   end
 end
