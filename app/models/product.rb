@@ -24,7 +24,7 @@ class Product < ApplicationRecord
     return total
   end
 
-  has_many :order
+  has_many :orders
   belongs_to :supplier
   # def supplier
   #   Supplier.find_by(id: supplier_id)
