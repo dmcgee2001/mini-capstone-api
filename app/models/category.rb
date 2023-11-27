@@ -4,8 +4,8 @@ class Category < ApplicationRecord
 
   def products
     products = []
-    category_products.each do |category_product|
-      products << category_product.product
+    category_products.map do |category_product|
+      category_product.product
     end
   end
 end
