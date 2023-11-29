@@ -7,9 +7,13 @@ class ProductsController < ApplicationController
   end
 
   def index
-    @products = Product.all
+    if params["category"]
+      category = Category.find_by(name: params["category"])
+      @products = category.products
+    else
+      @products = Product.all
+    end
     render :index
-    pp current_user
   end
 
   def create
@@ -34,7 +38,7 @@ class ProductsController < ApplicationController
       name: params["name"] || @product.name,
       price: params["price"] || @product.price,
       description: params["description"] || @product.description,
-      description: params["inventory"] || @product.inventory,
+      inventory: params["inventory"] || @product.inventory,
       supplier_id: params["supplier_id"] || @product.supplier_id,
     )
     if @product.valid?
