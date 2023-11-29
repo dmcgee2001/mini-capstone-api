@@ -5,6 +5,7 @@ class Product < ApplicationRecord
   has_many :images
   has_many :carted_products
   has_many :users, through: :carted_products
+  has_many :orders, through: :carted_products
   # validates :name, :price, presence: true
   # validates :name, uniqueness: true
   # validates :name, length: { in: 1..30 }
