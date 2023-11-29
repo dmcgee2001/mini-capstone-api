@@ -1,4 +1,10 @@
 class Product < ApplicationRecord
+  has_many :category_products
+  has_many :categories, through: :category_products
+  belongs_to :supplier
+  has_many :images
+  has_many :carted_products
+  has_many :users, through: :carted_products
   # validates :name, :price, presence: true
   # validates :name, uniqueness: true
   # validates :name, length: { in: 1..30 }
@@ -24,16 +30,12 @@ class Product < ApplicationRecord
     return total
   end
 
-  belongs_to :supplier
   # def supplier
   #   Supplier.find_by(id: supplier_id)
   # end
-  has_many :images
   # def images
   #   Image.where(product_id: id)
   # end
-  has_many :category_products
-  has_many :categories, through: :category_products
 
   def categories
     category_products.map do |category_product|
