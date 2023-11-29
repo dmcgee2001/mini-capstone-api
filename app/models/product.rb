@@ -30,16 +30,9 @@ class Product < ApplicationRecord
     return total
   end
 
-  # def supplier
-  #   Supplier.find_by(id: supplier_id)
-  # end
-  # def images
-  #   Image.where(product_id: id)
-  # end
-
   def categories
     category_products.map do |category_product|
-      category_product.category
+      category_product.category.name
     end
   end
 end
