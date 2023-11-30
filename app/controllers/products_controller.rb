@@ -21,7 +21,7 @@ class ProductsController < ApplicationController
       name: params["name"],
       price: params["price"],
       description: params["description"],
-      description: params["inventory"],
+      inventory: params["inventory"],
       supplier_id: params["supplier_id"],
     )
     @product.save
